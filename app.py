@@ -22,7 +22,7 @@ def run_etl():
         logger.info("Starting ETL process...")
         
         # Check for required environment variable
-        dataset_id = os.environ.get("BIGQUERY_DATASET")
+        dataset_id = 'baseball_databank'
         if not dataset_id:
             logger.error("BIGQUERY_DATASET environment variable not set")
             return jsonify({"error": "BIGQUERY_DATASET environment variable not set"}), 500
